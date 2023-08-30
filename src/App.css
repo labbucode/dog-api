@@ -59,6 +59,10 @@ input::placeholder{
   .list{
   grid-template-columns: repeat(3, 1fr); 
   }
+  .dialog-container{
+    width: 26rem;
+    height: 20rem;
+  }
 }
 @media only screen 
 and (min-device-width : 600px) 
