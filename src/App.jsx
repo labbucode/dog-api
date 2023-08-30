@@ -2,8 +2,7 @@
 import './App.css'
 import React , { useState, useEffect } from 'react'
 import Header from './Component/Header'
-
-
+import ImgDialog from './Component/ImgDialog';
 
 
 function App() {
@@ -12,6 +11,9 @@ function App() {
   const [breedsDataImg, setBreedsDataImg] = useState({});
   const [filterDog, setFilterDog] = useState([]);
   const [search, setSearch] = useState('');
+  const [dialog, setDialog] = useState(false);
+
+  const closeModel = () => setDialog(false);
 
   useEffect(() => {
     fetchBreeds();
@@ -58,8 +60,8 @@ function App() {
 
     <div className="App">
         <Header />
-             
-       
+
+
         <div className='input'>
           <input placeholder='Type here to filter by breed' value={search} onChange={handleSearchBar} />
         </div>
@@ -67,16 +69,14 @@ function App() {
         <div className='container'>
           <ul className='list'>
               {filterDog.map(breed => (
-                <li className='list-item' key={breed}>
+                <li className='list-item' key={breed} onClick={() => setDialog(true)}>
                   <img src={breedsDataImg[breed]} alt={breed} />
                   {breed}
                 </li>
               ))}
           </ul>
         </div>
-
-        
-
+        {dialog && <ImgDialog closeModel={closeModel} />}  
       </div>   
   )
 }

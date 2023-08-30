@@ -73,6 +73,7 @@ and (max-device-width : 1200px) {
     .Header1{
       justify-content: space-between;
     }
+    
 }
 .dialog-wrapper{
   position: fixed;
