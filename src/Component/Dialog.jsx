@@ -32,7 +32,15 @@ export default function Dialog( {closeModel} ) {
             <img src='https://images.dog.ceo/breeds/bouvier/n02106382_3048.jpg' />
             <img src='https://images.dog.ceo/breeds/bouvier/n02106382_3048.jpg' />
             <img src='https://images.dog.ceo/breeds/bouvier/n02106382_3048.jpg' />
-                        <img src='https://images.dog.ceo/breeds/bouvier/n02106382_3048.jpg' />
+            <img src='https://images.dog.ceo/breeds/bouvier/n02106382_3048.jpg' />
+            <img src='https://images.dog.ceo/breeds/bouvier/n02106382_3048.jpg' />
+            <img src='https://images.dog.ceo/breeds/bouvier/n02106382_3048.jpg' />
+            <img src='https://images.dog.ceo/breeds/bouvier/n02106382_3048.jpg' />
+            <img src='https://images.dog.ceo/breeds/bouvier/n02106382_3048.jpg' />
+            <img src='https://images.dog.ceo/breeds/bouvier/n02106382_3048.jpg' />
+            <img src='https://images.dog.ceo/breeds/bouvier/n02106382_3048.jpg' />
+            <img src='https://images.dog.ceo/breeds/bouvier/n02106382_3048.jpg' />
+            <img src='https://images.dog.ceo/breeds/bouvier/n02106382_3048.jpg' />
     </div>
     </div>
     </div>
