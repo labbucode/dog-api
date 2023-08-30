@@ -10,10 +10,19 @@ function App() {
 
   const [breedsData, setBreedsData] = useState([]);
   const [breedsDataImg, setBreedsDataImg] = useState({});
+  const [filterDog, setFilterDog] = useState([]);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     fetchBreeds();
   }, []); 
+
+  const handleSearchBar = (e) => {
+    const value = e.target.value.toLowerCase();
+    setSearch(value);
+    const filtered = breedsData.filter(breed => breed.toLowerCase().includes(value));
+    setFilterDog(filtered);
+  };
   
   const fetchBreeds = () => {
     fetch("https://dog.ceo/api/breeds/list/all")
@@ -22,6 +31,7 @@ function App() {
         const breeds = Object.keys(data.message);
         setBreedsData(breeds);
         fetchBreedsImg(breeds);
+        setFilterDog(breeds);
     })
     .catch(err => console.error("data error"+err)); 
   };
@@ -51,12 +61,12 @@ function App() {
              
        
         <div className='input'>
-          <input placeholder='Type here to filter by breed' />
+          <input placeholder='Type here to filter by breed' value={search} onChange={handleSearchBar} />
         </div>
 
         <div className='container'>
           <ul className='list'>
-              {breedsData.map(breed => (
+              {filterDog.map(breed => (
                 <li className='list-item' key={breed}>
                   <img src={breedsDataImg[breed]} alt={breed} />
                   {breed}

@@ -119,7 +119,18 @@ and (max-device-width : 1200px) {
   padding: 10px;
   }
   .dialog-image-container{
-
+      margin: 5%;
+  }
+  .dialog-image-show{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 15px;
+    
+  }
+  .dialog-image-show img{
+    height: 100px;
+    width: 100px;
+    margin-bottom: 10px;
   }
 
  
