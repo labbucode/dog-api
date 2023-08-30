@@ -99,14 +99,13 @@ and (max-device-width : 1200px) {
   margin: 5%;
   display: flex;
   justify-content: space-evenly;
- 
 }
 .dialog-main input{
-  width: 25vw;  
+  width: 30%;  
   
 }
 .dialog-main select{
-  width: 25vw;  
+  width: 30%;  
   background-color: #c5c5c4;
 }
 .dialog-button{
@@ -120,7 +119,7 @@ and (max-device-width : 1200px) {
   padding: 10px;
   }
   .dialog-image-container{
-    
+
   }
 
  
