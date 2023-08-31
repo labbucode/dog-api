@@ -33,9 +33,9 @@ export default function ImgDialog({ closeModel, currBreed }) {
           <h4>Sub Breed Images</h4>
           {subBreedImgs.length > 0 && (
             <ul className='dialog-image-show' style={{listStyle: "none"}}>
-              {subBreedImgs.slice(0, 4).map((imgSrc, index) => (
-                <li key={index}>
-                  <img src={imgSrc} alt={`Sub Breed ${index}`} />
+              {subBreedImgs.slice(0, 4).map((imgSrc) => (
+                <li >
+                  <img src={imgSrc} />
                 </li>
               ))}
             </ul>

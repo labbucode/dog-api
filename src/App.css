@@ -59,10 +59,6 @@ input::placeholder{
   .list{
   grid-template-columns: repeat(3, 1fr); 
   }
-  .dialog-container{
-    width: 26rem;
-    height: 20rem;
-  }
 }
 @media only screen 
 and (min-device-width : 600px) 
@@ -90,8 +86,7 @@ and (max-device-width : 1200px) {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  width: 40rem;
-  height: 25rem;
+  width: 50%;
 }
 .dialog-header{
   background-color: #a3a1a1;
@@ -105,14 +100,11 @@ and (max-device-width : 1200px) {
   display: flex;
   justify-content: space-evenly;
 }
-.dialog-main input{
-  width: 30%;  
-  
-}
-.dialog-main select{
-  width: 30%;  
+.dialog-main input, .dialog-main select{
+  width: 40%; 
   background-color: #c5c5c4;
 }
+
 .dialog-button{
     display: flex;
     justify-content: center;
@@ -130,6 +122,8 @@ and (max-device-width : 1200px) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-top: 15px;
+    overflow-y: scroll;
+    max-height: 120px;
     
   }
   .dialog-image-show img{
