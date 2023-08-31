@@ -58,7 +58,7 @@ export default function Dialog( {closeModel, breedsData} ) {
 {/* working */}
     {  ImageShow && subBreedImgs.length > 0 && (
           <ul className='dialog-image-show' style={{listStyle: "none"}}>
-              {subBreedImgs.slice(0, 5).map((imgSrc) => (
+              {subBreedImgs.slice(0, value).map((imgSrc) => (
                 <li >
                   <img src={imgSrc} />
                 </li>
