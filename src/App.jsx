@@ -12,9 +12,10 @@ function App() {
   const [filterDog, setFilterDog] = useState([]);
   const [search, setSearch] = useState('');
   const [dialog, setDialog] = useState(false);
+  const [currBreed, setCurrBreed] = useState('');
+
 
   const closeModel = () => setDialog(false);
-
   useEffect(() => {
     fetchBreeds();
   }, []); 
@@ -56,8 +57,12 @@ function App() {
   .catch(err => console.error("img error"+err));
 };
 
-  return (
+const handleDialog = (breed) => {
+  setDialog(true);
+  setCurrBreed(breed);
+}
 
+  return (
     <div className="App">
         <Header />
 
@@ -69,14 +74,14 @@ function App() {
         <div className='container'>
           <ul className='list'>
               {filterDog.map(breed => (
-                <li className='list-item' key={breed} onClick={() => setDialog(true)}>
+                <li className='list-item' key={breed} onClick={() => handleDialog(breed)}>
                   <img src={breedsDataImg[breed]} alt={breed} />
                   {breed}
                 </li>
               ))}
           </ul>
         </div>
-        {dialog && <ImgDialog closeModel={closeModel} />}  
+        {dialog && <ImgDialog closeModel={closeModel} currBreed={currBreed} />}  
       </div>   
   )
 }
