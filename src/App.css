@@ -100,7 +100,10 @@ and (max-device-width : 1200px) {
   display: flex;
   justify-content: space-evenly;
 }
-.dialog-main input, .dialog-main select{
+.dialog-main input{
+  width: 40%; 
+}
+.dialog-main select{
   width: 40%; 
   background-color: #c5c5c4;
 }

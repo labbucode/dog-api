@@ -4,7 +4,7 @@ import Dialog from './Dialog';
 
 
 
-export default function Header() {
+export default function Header( {breedsData} ) {
 
   const [dialog, setDialog] = useState(false);
 
@@ -15,7 +15,7 @@ export default function Header() {
         <div className='Header1'>
         <h1>Dog Gallery</h1>
     <button className="Header1-button" onClick={() => setDialog(true)}>Custom Search</button>
-    {dialog && <Dialog closeModel={closeModel} />}  
+    {dialog && <Dialog closeModel={closeModel} breedsData={breedsData} />}  
         </div>
     </div>   
   )

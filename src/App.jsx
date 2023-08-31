@@ -64,7 +64,7 @@ const handleDialog = (breed) => {
 
   return (
     <div className="App">
-        <Header />
+        <Header breedsData={breedsData} />
 
 
         <div className='input'>
