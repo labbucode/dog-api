@@ -55,7 +55,7 @@ export default function Dialog( {closeModel, breedsData} ) {
     <div  className='dialog-image-container'>
     {  ImageShow  && <p> Showing {value} Images of {breed} </p> }
 
-{/* working */}
+
     {  ImageShow && subBreedImgs.length > 0 && (
           <ul className='dialog-image-show' style={{listStyle: "none"}}>
               {subBreedImgs.slice(0, value).map((imgSrc) => (
@@ -66,10 +66,7 @@ export default function Dialog( {closeModel, breedsData} ) {
             </ul>
               
           )}
-          {/* working */}
 
-
-            {/* <img src='https://images.dog.ceo/breeds/bouvier/n02106382_3048.jpg' /> */}
     </div>
     </div>
     </>
